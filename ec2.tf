@@ -1,8 +1,8 @@
-resource "aws_key_pair" "ipraxa" {
-    key_name = "ipraxa"
-    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeS3i+Gw67UHbZwWRSPkBcqLodJbG/DCrXbbsj0poxtN8IHazza5H9VmnDOd544+2EtIDYd0eHdt4nVZkWDgGs3Wt+hrK866amtCBNxL4Sxx81SrxQTgX4N+A6X77DalHb5J0pXe+12Y6A2XogsaaBjVkhH4liHCMtqlQaXsHJtMz+xylZpXegpgF8gjIEIDlTwsm6LrvPumuRXFhkTIGEYfpc5GDCUp30I6jQ6XVDV7LVtwDgif5mVQsk7DwDXGmt44wyBu2HQjmWw3Vsu6WBSBvnzzC7O7vu+FANBj2z2zwncWhkY2oDDTDdohv1YzrMQ2vpyfkr+iyV3xKlCa7v ansible@workstation.example.com"
+#resource "aws_key_pair" "ipraxa" {
+#    key_name = "ipraxa"
+#    public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeS3i+Gw67UHbZwWRSPkBcqLodJbG/DCrXbbsj0poxtN8IHazza5H9VmnDOd544+2EtIDYd0eHdt4nVZkWDgGs3Wt+hrK866amtCBNxL4Sxx81SrxQTgX4N+A6X77DalHb5J0pXe+12Y6A2XogsaaBjVkhH4liHCMtqlQaXsHJtMz+xylZpXegpgF8gjIEIDlTwsm6LrvPumuRXFhkTIGEYfpc5GDCUp30I6jQ6XVDV7LVtwDgif5mVQsk7DwDXGmt44wyBu2HQjmWw3Vsu6WBSBvnzzC7O7vu+FANBj2z2zwncWhkY2oDDTDdohv1YzrMQ2vpyfkr+iyV3xKlCa7v ansible@workstation.example.com"
   
-}
+#}
 
 resource "aws_instance" "PublicEC2" {
     count = "${length(var.public_subnet_cidr)}"
