@@ -1,8 +1,8 @@
 on: [push, pull_request]
 
 env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_scret_access_key }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   
 jobs:
   build:
@@ -16,4 +16,4 @@ jobs:
         with:
           version: "0.12.15"
       - name: Build module "aws-instance-first-script"
-        run: terraform init && terraform validate && terraform plan -out terraform-plan  && terraform apply terraform-plan
+        run: terraform init && terraform validate && terraform plan -out terraform-plan  #&& terraform apply terraform-plan
