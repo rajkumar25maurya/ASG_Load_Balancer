@@ -4,7 +4,7 @@ resource "aws_launch_configuration" "worker" {
     image_id                            = "${var.ami}"
     instance_type                       = "${var.instance_type}"
     security_groups                     = ["${aws_security_group.elb_security_group.id}"]
-    associassociate_public_ip_address   = true
+    associate_public_ip_address   = true
     key_name                            = "ipraxa"
     user_data = <<-EOF
         sudo apt-get update -y
